@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>College</title>
+</head>
+
+<body>
+    <div class ="topnav">
+        <h1>College Knowledge Base</h1>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Add
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/article">Article</a>
+                <a href="/college">College</a>
+                <a href="/job">Job Position</a>
+                <a href="/resume">Resume</a>
+                <a href="/scholarships">Scholarships</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Add College/University</h1>
+    <form action="college" method="POST"> <!-- use the following to determine where the sumbitted information will go; i.e., form-handler/database | <form action="form-handler/database"> -->
+        <label for="college_name">College Name:</label><br>
+            <input type="text" id="college_name" name="cname" placeholder="Western Oregon University"><br>
+        
+        <label for="college_abbreviation">Abbreviation:</label><br>
+            <input type="text" id="college_abbreviation" name="cabb" placeholder="WOU"><br>
+        
+        <label for="college_location">Location:</label><br>
+            <input type="text" id="college_location" name="clocation" placeholder="Monmouth, OR"><br>         
+        
+        <label for="college_mascot">GPA Required:</label><br>
+            <input type="text" id="college_gpa_required" name="cgpa" placeholder="3.5"><br>
+        
+        <br>
+        
+        <label for="college_instate_attendance">In-State Cost of Attendance:</label><br>
+            <input type="text" id="college_instate_attendance" name="cinstate" placeholder="$24,732"><br>
+        
+        <label for="college_outstate_attendance">Out-of-State Cost of Attendance:</label><br>
+            <input type="text" id="college_outstate_attendance" name="coutstate" placeholder="$44,172"><br>
+        
+        <label for="college_majors">Number of Offered Majors:</label><br>
+            <input type="text" id="college_majors" name="cmajors" placeholder="40"><br>
+        
+        <label for="college_top3_majors">Top 3 Majors: (*comma seperated)</label><br>
+            <input type="text" id="college_top3_majors" name="ctop3majors" placeholder="Education,Business,Psychology"><br>
+        
+        <label for="college_enrollment">Number of Students Enrolled:</label><br>
+            <input type="text" id="college_enrollment" name="cenrollment" placeholder="4,019"><br>
+        
+        <label for="college_size">Campus Size (acres):</label><br>
+            <input type="text" id="college_size" name="csize" placeholder="157"><br>
+        
+        <label for="college_url">College URL:</label><br>
+            <input type="url" id="college_url" name="curl" placeholder="https://wou.edu/"><br>
+        
+        <button type="submit" id="submitbtn">Submit</button>
+        <input type="reset">
+
+        <div class=" alert" id="alert">
+            <strong class="message" id="message"></strong>
+        </div>
+    </form> 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/javascript/index.js"></script>
+</body>
+    
+</html>

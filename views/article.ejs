@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Article</title>
+</head>
+
+<body>
+    <div class ="topnav">
+        <h1>College Knowledge Base</h1>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Add
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/article">Article</a>
+                <a href="/college">College</a>
+                <a href="/job">Job Position</a>
+                <a href="/resume">Resume</a>
+                <a href="/scholarships">Scholarships</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Add Article</h1>
+    <form action="article" method="POST"> <!-- use the following to determine where the sumbitted information will go; i.e., form-handler/database | <form action="form-handler/database"> -->
+        <div class="articles">
+        <label for="article_title">Article Title:</label><br>
+            <input type="text" id="article_title" name="atitle" placeholder="How to Be Successful in College: 9 Tips" required><br>
+        
+        <label for="article_author">Article Author:</label><br>
+            <input type="text" id="article_author" name="aauthor" placeholder="Coursera" required><br>
+        
+        <label for="article_date">Date of Publication:</label><br>
+            <input type="date" id="article_date" name="adate" required><br>
+        
+        <label for="article_content"> Article Content:</label><br>
+            <textarea id="article_content" name="acontent" cols="30" rows="10" placeholder="Recognizing your values....." required></textarea><br>
+        
+        <label for="source_url">Source URL:</label><br>
+            <input type="url" id="source_url" name="aurl" placeholder="https://www.coursera.org/articles/how-to-be-successful-in-college" required><br>
+        </div>
+        <br>
+        
+        <div class="articletags">
+            <h4>Tags</h4>
+            <input type="checkbox" id="college_tag" name="actag"> <!-- Value to be determined if needed | value="1" -->
+                <label for="college_tag">College</label><br>
+        
+            <input type="checkbox" id="resume_tag" name="artag">
+                <label for="resume_tag">Resume</label><br>
+        
+            <input type="checkbox" id="job_tag" name="ajtag">
+                <label for="job_tag">Job</label><br>
+       
+            <input type="checkbox" id="scholarship_tag" name="astag">
+                <label for="scholarship_tag">Scholarship</label><br>
+
+            <button type="submit" id="submitbtn">Submit</button>
+            <button type="reset" class="artreset">Reset</button>
+        </div>
+
+        <div class=" alert" id="alert">
+            <strong class="message" id="message"></strong>
+        </div>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/javascript/index.js"></script>
+
+</body>
+    
+</html>

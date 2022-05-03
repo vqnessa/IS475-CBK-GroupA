@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Resume</title>
+</head>
+
+<body>
+    <div class ="topnav">
+        <h1>College Knowledge Base</h1>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Add
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/article">Article</a>
+                <a href="/college">College</a>
+                <a href="/job">Job Position</a>
+                <a href="/resume">Resume</a>
+                <a href="/scholarships">Scholarships</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Add Resume Templete</h1>
+    <form action="resume" method="POST"> <!-- use the following to determine where the sumbitted information will go; i.e., form-handler/database | <form action="form-handler/database"> -->
+        <div class="resumes">
+            <label for="resume_title">Resume Position:</label><br>
+                <input type="text" id="resume_title" name="rtitle" placeholder="Junior Architect" required><br>
+        
+            <label for="resume_templete">Select a Resume Templete:</label><br>
+                <input type="file" id="resume_templete" name="rfile" required><br>
+        
+            <label for="resume_url">Resume URL:</label><br>
+                <input type="url" id="resume_url" name="rurl" placeholder="https://cdn-blog.novoresume.com/articles/resume-examples/resume-samples.png" required><br>
+        </div>
+
+        <div class="resumebtns">
+            <button type="submit" id="submitbtn">Submit</button>
+            <button type="reset" class="resumereset">Reset</button>
+        </div>
+
+        <div class=" alert" id="alert">
+            <strong class="message" id="message"></strong>
+        </div>
+    </form> 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/javascript/index.js"></script>
+</body>
+    
+</html>

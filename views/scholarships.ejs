@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Scholarship</title>
+</head>
+
+<body>
+    <div class ="topnav">
+        <h1>College Knowledge Base</h1>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Add
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/article">Article</a>
+                <a href="/college">College</a>
+                <a href="/job">Job Position</a>
+                <a href="/resume">Resume</a>
+                <a href="/scholarships">Scholarships</a>
+            </div>
+        </div>
+    </div>
+    
+    <h1>Add Scholarship</h1>
+    <form action="scholarships" method="POST"> <!-- use the following to determine where the sumbitted information will go; i.e., form-handler/database | <form action="form-handler/database"> -->
+        <label for="scholarship_name">Scholarship Name:</label><br>
+            <input type="text" id="scholarship_name" name="sname" placeholder="We Stand Together College Scholarship" required><br>
+        
+        <label for="scholarship_availability">Availability: (*National or Specify State)</label><br>
+            <input type="text" id="scholarship_availability" name="savailability" placeholder="National" required><br>
+        
+        <label for="scholarship_award">Award Amount:</label><br>
+            <input type="text" id="scholarship_award" name="saward" placeholder="$25,000" required><br>
+        
+        <label for="scholarship_url">Scholarship URL:</label><br>
+            <input type="url" id="scholarship_url" name="surl" placeholder="https://learnmore.scholarsapply.org/stridewestandtogether/" required><br>
+        
+        <button type="submit" id="submitbtn">Submit</button>
+        <input type="reset">
+
+        <div class=" alert" id="alert">
+            <strong class="message" id="message"></strong>
+        </div>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/javascript/index.js"></script>
+</body>
+    
+</html>

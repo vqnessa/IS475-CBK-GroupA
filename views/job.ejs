@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Job</title>
+</head>
+
+<body>
+    <div class ="topnav">
+        <h1>College Knowledge Base</h1>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Add
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/article">Article</a>
+                <a href="/college">College</a>
+                <a href="/job">Job Position</a>
+                <a href="/resume">Resume</a>
+                <a href="/scholarships">Scholarships</a>
+            </div>
+        </div>
+    </div>
+
+    <h1>Add Job Position</h1>
+    <form action="job" method="POST"> <!-- use the following to determine where the sumbitted information will go; i.e., form-handler/database | <form action="form-handler/database"> -->
+        <label for="job_title">Job Title:</label><br>
+            <input type="text" id="job_title" name="jtitle" placeholder="High-School Teacher" required><br>
+        
+        <label for="job_duties">Job Duties: (*comma seperated)</label><br>
+            <textarea id="job_duties" name="jduties" cols="30" rows="10" placeholder="Plan, Assess, Adapt, Grade, Communicate, Work, Prepare, Develop, Supervise" required></textarea><br>
+
+        <label for="job_education_level">Required Level of Education:</label><br>
+            <input type="radio" id="job_education_level" name="jedulvl">
+                <label for="job_education_level">High-School/GED</label><br>
+           
+            <input type="radio" id="job_education_level" name="jedulvl">
+                <label for="job_education_level">Associate's</label><br>
+            
+            <input type="radio" id="job_education_level" name="jedulvl">
+                <label for="job_education_level">Bachelor's</label><br>
+            
+            <input type="radio" id="job_education_level" name="jedulvl">
+                <label for="job_education_level">Master's</label><br>
+            
+            <input type="radio" id="job_education_level" name="jedulvl">
+                <label for="job_education_level">PhD</label><br>
+        
+        <label for="job_salary">Average Salary:</label><br>
+            <input type="text" id="job_salary" name="jsalary" placeholder="63k" required><br>
+            
+        <label for="job_outlook">Job Outlook:</label><br>
+            <input type="text" id="job_outlook" name="joutlook" placeholder="8%" required><br>
+        
+        <label for="job_url">Job Position URL:</label><br>
+            <input type="url" id="job_url" name="jurl" placeholder="https://www.bls.gov/ooh/education-training-and-library/high-school-teachers.htm" required><br>
+        
+        <button type="submit" id="submitbtn">Submit</button>
+        <input type="reset">
+
+        <div class=" alert" id="alert">
+            <strong class="message" id="message"></strong>
+        </div>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/javascript/index.js"></script>
+</body>
+    
+</html>

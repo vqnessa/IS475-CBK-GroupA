@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Article Page</title>
+</head>
+
+<body>
+    <div class ="topnav">
+        <h1>College Knowledge Base</h1>
+        <a href="/">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Add
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/article">Article</a>
+                <a href="/college">College</a>
+                <a href="/job">Job Position</a>
+                <a href="/resume">Resume</a>
+                <a href="/scholarships">Scholarships</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Displays article contents taken from database -->
+    <div class="articles-container">
+        <h1 class="article-container-header">Latest Articles</h1>
+        <% for (let i = articles.length-1; i >= 0;  i--) { %>
+        <article class="article" id="<%= articles[i].rowid %>">
+            <div class="article-header">
+                <h1><%- articles[i].atitle %></h1>
+                <button class="more" id="<%= articles[i].rowid %>">Expand</button>
+            </div>
+            <small>Posted on: <%- articles[i].postime %></small>
+            <p><%- articles[i].acontent %></p>
+            <div class="article-details">
+                <h4>Article Details:</h4>
+                <small>Author: <%- articles[i].aauthor %></small>
+                <small>Date: <%- articles[i].adate %></small>
+                <small>url: <%- articles[i].aurl %></small>
+                <small>College Tag: <%- articles[i].actag %></small>
+                <small>Resume Tag: <%- articles[i].artag %></small>
+                <small>Job Position Tag: <%- articles[i].ajtag %></small>
+                <small>Scholarship Tag: <%- articles[i].astag %></small>
+            </div>
+        </article>
+
+        <% } %>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="/javascript/index.js"></script>
+
+</body>
+    
+</html>
